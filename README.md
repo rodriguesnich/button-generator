@@ -1,6 +1,7 @@
 ### Task-List
 - [ ] Implement Materialize Sliders to Change Props
 - [ ] Make Buton Click Copy Button to Clipboard
+- [ ] Implement High Refresh style when changing sizes
 
 # Foobar
 
