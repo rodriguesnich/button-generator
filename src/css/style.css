@@ -43,5 +43,13 @@ img {
   justify-content: center;
   width: 30%;
 }
+.main .content .but .butt {
+  background-color: white;
+  border-color: black;
+  width: 125px;
+  height: 55px;
+  border-width: 1px;
+  border-radius: 0px;
+}
 
 /*# sourceMappingURL=style.css.map */

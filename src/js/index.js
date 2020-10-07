@@ -1,5 +1,5 @@
 // alert('Roi')
-var button = $('.but')
+var button = $('.butt')
 button.css("border-style", "solid")
 
 // Width Listner and Setter
