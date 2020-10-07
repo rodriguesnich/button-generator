@@ -1,56 +1,78 @@
 // Inicio Resets Basico
 html {
-    box-sizing: border-box;
-    font-size: 16px;
+  box-sizing: border-box;
+  font-size: 16px;
 }
-  
-*, *:before, *:after {
-    box-sizing: inherit;
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
-  
+
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
     font-weight: normal;
-    h1, h2, h3, h4, h5, h6, p {
-        font-weight: normal;    
-    }
-    ol, ul {
-        list-style: none;
-    }
+  }
+  ol,
+  ul {
+    list-style: none;
+  }
 }
-  
+
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /*For FireFox*/
+
+  &::-webkit-inner-spin-button {
+    /*For Webkits like Chrome and Safari*/
+    -webkit-appearance: none;
+    margin: 0;
+  }
 }
 // Fim Reset Basico
 
-
 .main {
+  display: flex;
+  justify-content: center;
+  .content {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    .content {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        justify-content: space-around;
-        .edit {
-            width: 70%;
-        }
-        .but {
-            display: flex;
-            justify-content: center;
-            width: 30%;
-            .butt {
-                background-color: white;
-                border-color: black;
-                width: 125px;
-                height: 55px;
-                border-width: 1px;
-                border-radius: 0px;
-            }
-        }
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    .edit {
+      width: 70%;
+      .display_size {
+        width: 50px;
+      }
     }
+    .but {
+      display: flex;
+      justify-content: center;
+      width: 30%;
+      .butt {
+        background-color: white;
+        border-color: black;
+        width: 125px;
+        height: 55px;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 0px;
+      }
+    }
+  }
 }

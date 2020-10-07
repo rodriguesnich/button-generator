@@ -1,37 +1,33 @@
 // alert('Roi')
-var button = $('.butt')
-button.css("border-style", "solid")
+var button = $(".butt");
+
+function sizeSetter(component, tipe) {
+  console.log(component);
+  let size = component.val().toString() + "px";
+  console.log(size);
+  button.css(tipe, size);
+}
 
 // Width Listner and Setter
-$("#width").bind('keyup mouseup', function () {
-    let component = $(this)
-    let size = component.val().toString()
-    button.css("width", size)
-    console.log("width: " + component.val() + "| size: " + size)
+$("#width").bind("keyup mouseup", function () {
+  sizeSetter($(this), "width");
+  $("#display_width").val(parseInt($(this).val()));
 });
 
 // Heigth Listner and Setter
-$("#heigth").bind('keyup mouseup', function () {
-    let component = $(this) 
-    let size = component.val().toString()
-    button.css("height", size)  
-    console.log("height: " + component.val());
+$("#heigth").bind("keyup mouseup", function () {
+  sizeSetter($(this), "height");
+  $("#display_heigth").val(parseInt($(this).val()));
 });
 
-// Border Listner and Setter
-$("#border").bind('keyup mouseup', function () {
-    // alert("changed");            
-    let component = $(this)
-    let size = component.val().toString()
-    button.css("border-width", size)
-    console.log("border: " + component.val());
+// Border-Width Listner and Setter
+$("#border").bind("keyup mouseup", function () {
+  sizeSetter($(this), "border-width");
+  $("#display_border").val(parseInt($(this).val()));
 });
 
-// Radius Listner and Setter
-$("#radius").bind('keyup mouseup', function () {
-    // alert("changed");            
-    let component = $(this)
-    let size = component.val().toString() + "px"
-    button.css("border-radius", size)
-    console.log("radius: " + component.val());
+// Border-Radius Listner and Setter
+$("#radius").bind("keyup mouseup", function () {
+  sizeSetter($(this), "border-radius");
+  $("#display_radius").val(parseInt($(this).val()));
 });

@@ -3,7 +3,9 @@ html {
   font-size: 16px;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -12,16 +14,33 @@ body {
   padding: 0;
   font-weight: normal;
 }
-body h1, body h2, body h3, body h4, body h5, body h6, body p {
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body p {
   font-weight: normal;
 }
-body ol, body ul {
+body ol,
+body ul {
   list-style: none;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  /*For FireFox*/
+}
+input[type=number]::-webkit-inner-spin-button {
+  /*For Webkits like Chrome and Safari*/
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .main {
@@ -38,6 +57,9 @@ img {
 .main .content .edit {
   width: 70%;
 }
+.main .content .edit .display_size {
+  width: 50px;
+}
 .main .content .but {
   display: flex;
   justify-content: center;
@@ -48,6 +70,7 @@ img {
   border-color: black;
   width: 125px;
   height: 55px;
+  border-style: solid;
   border-width: 1px;
   border-radius: 0px;
 }
